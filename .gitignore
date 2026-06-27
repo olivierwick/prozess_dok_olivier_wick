@@ -1,0 +1,20 @@
+# Backups der Originale (nicht hosten)
+_originals/
+
+# Verwaiste, nicht eingebundene Medien (enthält 610MB-Datei > GitHub-Limit)
+INSTALLATION/
+
+# Kompressions-Werkzeug/Log
+_compress.sh
+_compress.log
+
+# Temp-Reste
+*.__tmp__.*
+*.__a__.*
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Versehentlich hineingeklontes leeres GitHub-Repo
+prozess_dok_olivier_wick/
