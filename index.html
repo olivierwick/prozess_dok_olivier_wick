@@ -422,6 +422,15 @@
         width: 38px !important;
         height: 38px !important;
       }
+      /* Instagram Layout-Skizzen: auf Mobil untereinander statt nebeneinander */
+      [data-fullscreen-srcs] {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      /* LIVE-VISUAL erstes Video: eine Stufe schmaler auf Mobil (75% statt voll) */
+      .lv-first {
+        width: 75% !important;
+      }
     }
 
     @media (max-width: 600px) and (pointer: coarse) {
@@ -667,11 +676,11 @@
             <div class="media-caption">My little piece of privacy<br>2010<br>Niklas Roy<br>Berlin</div>
           </div>
           <div id="work-liklak" class="media-group" style="width: 56.25%;">
-            <img src="RECHERCHE/2.jpg" alt="">
+            <img loading="lazy" width="1200" height="675" src="RECHERCHE/2.jpg" alt="">
             <div class="media-caption">LIK-LAK<br>2001<br>Claude Hidber<br>Basel</div>
           </div>
           <div class="media-group" style="width: 75%;">
-            <img src="RECHERCHE/3.jpg" alt="">
+            <img loading="lazy" width="1200" height="675" src="RECHERCHE/3.jpg" alt="">
             <div class="media-caption">LIK-LAK<br>2001<br>Claude Hidber<br>Basel</div>
           </div>
         </div>
@@ -681,7 +690,7 @@
         <div class="category-header">MOODBOARD</div>
         <div class="media-content">
           <div class="media-group" style="width: 75%;">
-            <img src="MOODBOARD/6.png" alt="">
+            <img loading="lazy" width="2000" height="1125" src="MOODBOARD/6.png" alt="">
             <div class="media-caption">Arbeiten von<br>Rafael Lozano-Hemmer<br>Daniel C. Howe<br>Jaume Plensa<br>Chaos Computer Club<br>Annica Cuppetelli &amp; Cristobal Mendoza<br>Kathrin A. Mast<br>Story Box Kollektiv</div>
           </div>
         </div>
@@ -701,9 +710,9 @@
           <div style="text-indent: 20px;">Im März war ich vor allem mit der Fertigstellung meiner schriftlichen Thesis beschäftigt. Ich habe mich aber auch mit der Frage des Mediums und der technischen Umsetzung auseinandergesetzt und in unserer Ausleihe nach Projektoren und deren Lumenwerten geschaut. Online fand ich einen Guide vom <a href="https://www.instructables.com/PROJECTION-BOMBING/" target="_blank" style="text-decoration: underline;">Graffiti Research Lab</a>, in dem beschrieben wird, was man für eine Projektion draussen alles braucht. Ich habe ausserdem überlegt, mit LED-Laufschriften oder Werbevitrinen in Kombination mit Kameras und Motion-, Color- oder Depth-Tracking zu arbeiten. Da ich aber bereits Zugang zu Beamern hatte und mir die technische Umsetzung am flexibelsten und mobilsten erschien, entschied ich mich, die Installation als Projektion zu realisieren. Parallel dazu habe ich erste Skizzen angefertigt, wie ich mir die Projektion oder die Werbevitrinen-Installation ungefähr vorstelle. Ich habe mir auch Gedanken darüber gemacht, verschiedene Projektionen in Basel aufzubauen, die miteinander verknüpft sind.</div>
         </div>
         <div class="media-content">
-          <img src="TECHNISCHE%20UMSETZUNG/skizzen/8.png" alt="" style="width: 56.25%; margin: 0 auto;">
-          <img src="TECHNISCHE%20UMSETZUNG/skizzen/7.png" alt="" style="width: 75%; margin: 0 auto;">
-          <img src="TECHNISCHE%20UMSETZUNG/skizzen/9.png" alt="" style="width: 56.25%; margin: 0 auto;">
+          <img loading="lazy" width="1731" height="1805" src="TECHNISCHE%20UMSETZUNG/skizzen/8.png" alt="" style="width: 56.25%; margin: 0 auto;">
+          <img loading="lazy" width="2020" height="1079" src="TECHNISCHE%20UMSETZUNG/skizzen/7.png" alt="" style="width: 75%; margin: 0 auto;">
+          <img loading="lazy" width="1208" height="1065" src="TECHNISCHE%20UMSETZUNG/skizzen/9.png" alt="" style="width: 56.25%; margin: 0 auto;">
         </div>
       </div>
     </div>
@@ -715,13 +724,13 @@
         <div class="category-header">ORTSSUCHE</div>
         <div class="media-content">
           <div class="media-group" style="width: 56.25%; align-self: center;">
-            <img src="ORTSSUCHE/_3.jpg" alt="" style="width: 100%;">
+            <img loading="lazy" width="1484" height="1024" src="ORTSSUCHE/_3.jpg" alt="" style="width: 100%;">
           </div>
           <div class="media-group" style="width: 56.25%; align-self: center;">
-            <img src="ORTSSUCHE/_2.jpg" alt="" style="width: 100%;">
+            <img loading="lazy" width="1000" height="500" src="ORTSSUCHE/_2.jpg" alt="" style="width: 100%;">
           </div>
           <div class="media-group" style="width: 75%; align-self: center;">
-            <img src="ORTSSUCHE/_1.jpg" alt="" style="width: 100%;">
+            <img loading="lazy" width="780" height="681" src="ORTSSUCHE/_1.jpg" alt="" style="width: 100%;">
           </div>
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -729,13 +738,13 @@
         </div>
         <div class="media-content">
           <div class="media-group portrait" style="width: 37.5%; align-self: center;">
-            <img src="ORTSSUCHE/1.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE/1.JPG" alt="" style="width: 100%;">
           </div>
           <div class="media-group" style="width: 75%; align-self: center;">
-            <img src="ORTSSUCHE/4.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE/4.JPG" alt="" style="width: 100%;">
           </div>
           <div class="media-group portrait" style="width: 37.5%; align-self: center;">
-            <img src="ORTSSUCHE/5.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE/5.JPG" alt="" style="width: 100%;">
           </div>
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -743,19 +752,19 @@
         </div>
         <div class="media-content">
           <div class="media-group portrait" style="width: 37.5%; align-self: center;">
-            <img src="ORTSSUCHE/6.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE/6.JPG" alt="" style="width: 100%;">
           </div>
           <div class="media-group portrait" style="width: 56.25%; align-self: center;">
-            <img src="ORTSSUCHE/7.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE/7.JPG" alt="" style="width: 100%;">
           </div>
         </div>
       </div>
       <div id="sec-ideen-sammlung" class="category-section">
         <div class="category-header">IDEEN-SAMMLUNG</div>
         <div class="media-content">
-          <img src="IDEEN-SAMMLUNG/scan1.png" alt="" style="width: 56.25%;">
-          <img src="IDEEN-SAMMLUNG/scan2.png" alt="" style="width: 75%;">
-          <img src="IDEEN-SAMMLUNG/scan3.png" alt="" style="width: 56.25%;">
+          <img loading="lazy" width="1550" height="1239" src="IDEEN-SAMMLUNG/scan1.png" alt="" style="width: 56.25%;">
+          <img loading="lazy" width="1716" height="1125" src="IDEEN-SAMMLUNG/scan2.png" alt="" style="width: 75%;">
+          <img loading="lazy" width="1709" height="1046" src="IDEEN-SAMMLUNG/scan3.png" alt="" style="width: 56.25%;">
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
           <div style="text-indent: 20px;">In dieser Phase habe ich skizziert und Ideen aufs Papier gebracht. Ich habe vor allem visuell gedacht. In einer Skizze habe ich mir überlegt, wie sich die Fassade eines Hauses über eine Interaktion neu anordnen lässt. In einer anderen Skizze wollte ich das Aussehen einer Fläche im öffentlichen Raum, zum Beispiel ein Graffiti, über eine Wand projizieren, sodass man mit dem projizierten Bild der Wand interagieren kann. Eine weitere Überlegung war, auf die Kommerzialisierung des Stadtraums durch Werbung zu reagieren und Werbeflächen so umzudeuten, dass dort statt einer kommerziellen Botschaft die Stimme einer Stadtbewohnerin oder eines Stadtbewohners erscheint. Diese Ideen fand ich aber alle eher visuell spannend, konzeptionell waren sie zu kurz gegriffen.</div>
@@ -764,13 +773,13 @@
         <div class="media-content">
           <div class="media-group portrait" style="width: 37.5%;">
             <div style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));"><div style="overflow: hidden; border-radius: 12px; background: black; line-height: 0;">
-              <img src="IDEEN-SAMMLUNG/stjohann.png" alt="" style="width: 100%;">
+              <img loading="lazy" width="2480" height="3508" src="IDEEN-SAMMLUNG/stjohann.png" alt="" style="width: 100%;">
             </div></div>
             <div class="media-caption">Plakatentwurf mit QR-Code</div>
           </div>
           <div class="media-group portrait" style="width: 37.5%;">
             <div style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));"><div style="overflow: hidden; border-radius: 12px; background: black; line-height: 0;">
-              <img src="IDEEN-SAMMLUNG/klybeck.png" alt="" style="width: 100%;">
+              <img loading="lazy" width="1414" height="2000" src="IDEEN-SAMMLUNG/klybeck.png" alt="" style="width: 100%;">
             </div></div>
             <div class="media-caption">Plakatentwurf mit Fläche für Meinungen</div>
           </div>
@@ -780,7 +789,7 @@
         <div class="category-header">VISUALS</div>
         <div class="media-content">
           <video src="VISUALS/1.mp4" autoplay muted loop playsinline style="width: 56.25%; margin: 0 auto;"></video>
-          <img src="VISUALS/2.png" alt="" class="portrait" style="width: 37.5%;">
+          <img loading="lazy" width="1822" height="2000" src="VISUALS/2.png" alt="" class="portrait" style="width: 37.5%;">
           <video src="VISUALS/3.mp4" autoplay muted loop playsinline style="width: 56.25%; margin: 0 auto;"></video>
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
@@ -790,7 +799,7 @@
         <div class="media-content">
           <video src="VISUALS/4.mov" autoplay muted loop playsinline style="width: 56.25%; margin: 0 auto;"></video>
           <video src="VISUALS/5.mov" autoplay muted loop playsinline style="width: 75%; margin: 0 auto;"></video>
-          <img src="VISUALS/6.png" alt="" style="width: 75%;">
+          <img loading="lazy" width="2000" height="659" src="VISUALS/6.png" alt="" style="width: 75%;">
           <video src="VISUALS/7.mp4" autoplay muted loop playsinline style="width: 56.25%; margin: 0 auto;"></video>
           <video src="VISUALS/8.mov" autoplay muted loop playsinline style="width: 75%;"></video>
         </div>
@@ -802,24 +811,24 @@
         </div>
         <div class="media-content">
           <video src="EXPERIMENTE/8.MOV" autoplay muted loop playsinline class="portrait" style="width: 37.5%;"></video>
-          <img src="EXPERIMENTE/5.JPG" alt="" style="width: 75%;">
-          <img src="EXPERIMENTE/6.JPG" alt="" style="width: 75%;">
-          <img src="EXPERIMENTE/10.JPG" alt="" style="width: 75%;">
+          <img loading="lazy" width="2560" height="1692" src="EXPERIMENTE/5.JPG" alt="" style="width: 75%;">
+          <img loading="lazy" width="2560" height="1692" src="EXPERIMENTE/6.JPG" alt="" style="width: 75%;">
+          <img loading="lazy" width="2560" height="1692" src="EXPERIMENTE/10.JPG" alt="" style="width: 75%;">
           <video src="EXPERIMENTE/1.mp4" autoplay muted loop playsinline class="portrait" style="width: 37.5%;"></video>
-          <img src="EXPERIMENTE/2.JPG" alt="" style="width: 75%;">
-          <img src="EXPERIMENTE/1.JPG" alt="" style="width: 75%;">
-          <img src="EXPERIMENTE/4.JPG" alt="" style="width: 75%;">
+          <img loading="lazy" width="2560" height="1692" src="EXPERIMENTE/2.JPG" alt="" style="width: 75%;">
+          <img loading="lazy" width="2560" height="1692" src="EXPERIMENTE/1.JPG" alt="" style="width: 75%;">
+          <img loading="lazy" width="2560" height="1692" src="EXPERIMENTE/4.JPG" alt="" style="width: 75%;">
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
           <div style="text-indent: 20px;">Später habe ich die gleichen Versuche draussen wiederholt. Von Martin von <a href="https://tweaklab.org/en/projects" target="_blank" style="text-decoration: underline;">Tweak Labs</a> habe ich eine Batterie erhalten, mit der die Projektion etwa zwei Stunden laufen konnte. Zusammen mit zwei Freunden habe ich Batterie und Projektor zum Hafen transportiert und das kleine Setup bei den Sitzflächen entlang der Promenade aufgebaut, gegenüber den Silos. Es war spannend zu beobachten, dass das Visual mit grösserer Distanz zur projizierten Fläche zwar grösser wurde, gleichzeitig aber die Leuchtkraft deutlich nachliess. Ausserdem hat die gewölbte Oberfläche das Visual verzerrt, und auf der geriffelten Wand sind die Bilder und Videos durch die Struktur teilweise aufgelöst worden. Diese Tests draussen haben mir ein Gefühl für die Installation gegeben und mir gezeigt, worauf ich noch achten und was ich verbessern muss.</div>
         </div>
         <div class="media-content">
-          <img src="EXPERIMENTE/IMG_3620.JPG" alt="" class="portrait" style="width: 37.5%;">
-          <img src="EXPERIMENTE/IMG_3617.JPG" alt="" class="portrait" style="width: 37.5%;">
-          <img src="EXPERIMENTE/IMG_3607.JPG" alt="" class="portrait" style="width: 56.25%;">
-          <img src="EXPERIMENTE/IMG_3618.JPG" alt="" class="portrait" style="width: 37.5%;">
-          <img src="EXPERIMENTE/IMG_3624.JPG" alt="" class="portrait" style="width: 37.5%;">
-          <img src="EXPERIMENTE/IMG_3639.JPG" alt="" class="portrait" style="width: 56.25%;">
+          <img loading="lazy" width="1920" height="2560" src="EXPERIMENTE/IMG_3620.JPG" alt="" class="portrait" style="width: 37.5%;">
+          <img loading="lazy" width="2560" height="1920" src="EXPERIMENTE/IMG_3617.JPG" alt="" class="portrait" style="width: 37.5%;">
+          <img loading="lazy" width="1919" height="2560" src="EXPERIMENTE/IMG_3607.JPG" alt="" class="portrait" style="width: 56.25%;">
+          <img loading="lazy" width="2560" height="1920" src="EXPERIMENTE/IMG_3618.JPG" alt="" class="portrait" style="width: 37.5%;">
+          <img loading="lazy" width="1920" height="2560" src="EXPERIMENTE/IMG_3624.JPG" alt="" class="portrait" style="width: 37.5%;">
+          <img loading="lazy" width="2560" height="1920" src="EXPERIMENTE/IMG_3639.JPG" alt="" class="portrait" style="width: 56.25%;">
           <video src="EXPERIMENTE/IMG_3646.mp4" autoplay muted loop playsinline class="portrait" style="width: 37.5%;"></video>
         </div>
       </div>
@@ -835,9 +844,9 @@
           <div style="text-indent: 20px;">Daraufhin stellte ich mir erneut die Frage nach meiner genauen Zielsetzung und was ich mit der Installation genau thematisieren möchte. Von Anfang an hatte ich die Idee, mittels Motion, Depth oder Color Tracking eine Interaktion vor Ort zu schaffen. Ich zweifelte jedoch an der technischen Machbarkeit, da ich in der Dunkelheit mit einer Kamera arbeiten würde. Ich hatte zwar bereits Erfahrung mit Motion und Color Tracking, jedoch wurden dabei Bewegungen oder Farben oft unzuverlässig oder gar nicht erkannt. Am Schluss entschied ich mich, die Partizipation über eine Website umzusetzen, auf der Besucherinnen und Besucher ihre eigene Meinung schreiben können. Von dieser Website könnte später auch eine erweiterte Form der Interaktion ausgehen.</div>
         </div>
         <div class="media-content">
-          <div style="width: 56.25%; align-self: center;"><img src="IDEENENTSCHEID/1.png" alt="" style="width: 100%;"></div>
-          <div style="width: 75%; align-self: center;"><img src="IDEENENTSCHEID/2.jpg" alt="" style="width: 100%;"></div>
-          <div style="width: 56.25%; align-self: center;"><img src="IDEENENTSCHEID/3.png" alt="" style="width: 100%;"></div>
+          <div style="width: 56.25%; align-self: center;"><img loading="lazy" width="1954" height="516" src="IDEENENTSCHEID/1.png" alt="" style="width: 100%;"></div>
+          <div style="width: 75%; align-self: center;"><img loading="lazy" width="2560" height="1799" src="IDEENENTSCHEID/2.jpg" alt="" style="width: 100%;"></div>
+          <div style="width: 56.25%; align-self: center;"><img loading="lazy" width="1995" height="1060" src="IDEENENTSCHEID/3.png" alt="" style="width: 100%;"></div>
         </div>
       </div>
       <div id="sec-website" class="category-section">
@@ -845,46 +854,46 @@
         <div class="media-content">
           <div class="media-group" style="align-items: center;">
           <div data-fullscreen-src="WEBSITE/1_backup.png" style="display:grid;grid-template-columns:repeat(10,1fr);gap:8px;width:75%;margin:0 auto;">
-            <img src="WEBSITE/panels/p0_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p0_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p1_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p2_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
-            <img src="WEBSITE/panels/p3_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p0_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="860" src="WEBSITE/panels/p1_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p2_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_0.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_1.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_2.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_3.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_4.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_5.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_6.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_7.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_8.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
+            <img loading="lazy" width="393" height="852" src="WEBSITE/panels/p3_9.png" alt="" style="width:100%;display:block;border-radius:6px;filter:drop-shadow(0 1px 5px rgba(0,0,0,0.15));transform:none;">
           </div>
           <div class="media-caption">Skizzen in Figma</div>
           </div>
@@ -895,13 +904,13 @@
         <div class="media-content">
           <div class="media-group" style="width: 18.75%;">
             <div style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));"><div style="overflow: hidden; border-radius: 12px; line-height: 0;">
-              <img src="WEBSITE/2.jpg" alt="">
+              <img loading="lazy" width="786" height="1704" src="WEBSITE/2.jpg" alt="">
             </div></div>
             <div class="media-caption">Finale Skizze für Mobile</div>
           </div>
           <div class="media-group" style="width: 56.25%;">
             <div style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));"><div style="overflow: hidden; border-radius: 12px; line-height: 0;">
-              <img src="WEBSITE/3.jpg" alt="">
+              <img loading="lazy" width="2400" height="1558" src="WEBSITE/3.jpg" alt="">
             </div></div>
             <div class="media-caption">Finale Skizze für Desktop</div>
           </div>
@@ -912,11 +921,11 @@
         </div>
         <div class="media-content">
           <div class="media-group" style="width: 75%;">
-            <img src="WEBSITE/8.png" alt="">
+            <img loading="lazy" width="2000" height="1677" src="WEBSITE/8.png" alt="">
             <div class="media-caption">Desktop-Landingpage</div>
           </div>
           <div class="media-group" style="width: 75%;">
-            <img src="WEBSITE/4.jpg" alt="">
+            <img loading="lazy" width="2560" height="2559" src="WEBSITE/4.jpg" alt="">
             <div class="media-caption">Mobile-Landingpage</div>
           </div>
         </div>
@@ -925,7 +934,7 @@
         </div>
         <div class="media-content">
           <div class="media-group" style="width: 75%;">
-            <img src="WEBSITE/5.jpg" alt="">
+            <img loading="lazy" width="2560" height="2559" src="WEBSITE/5.jpg" alt="">
             <div class="media-caption">Info-Subpage</div>
           </div>
         </div>
@@ -935,11 +944,11 @@
         </div>
         <div class="media-content">
           <div class="media-group" style="width: 75%;">
-            <img src="WEBSITE/6.jpg" alt="">
+            <img loading="lazy" width="2560" height="2559" src="WEBSITE/6.jpg" alt="">
             <div class="media-caption">Language-Subpage</div>
           </div>
           <div class="media-group" style="width: 75%;">
-            <img src="WEBSITE/7.jpg" alt="">
+            <img loading="lazy" width="2560" height="2559" src="WEBSITE/7.jpg" alt="">
             <div class="media-caption">Landingpage auf Arabisch</div>
           </div>
         </div>
@@ -948,7 +957,7 @@
         </div>
         <div class="media-content">
           <div class="media-group" style="width: 75%;">
-            <img src="WEBSITE/klycheck.JPG" alt="">
+            <img loading="lazy" width="835" height="563" src="WEBSITE/klycheck.JPG" alt="">
             <div class="media-caption">Website-Domain</div>
           </div>
         </div>
@@ -968,37 +977,37 @@
           <div class="media-group">
           <div data-fullscreen-srcs="INSTAGRAM/2.png,INSTAGRAM/3.png,INSTAGRAM/4.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;width:100%;">
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <img src="INSTAGRAM/panels2/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r1_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r1_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r1_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r2_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels2/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r1_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r1_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r1_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r2_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <img src="INSTAGRAM/panels3/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r1_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r1_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r1_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r2_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels3/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1049" height="1350" src="INSTAGRAM/panels3/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1080" height="1350" src="INSTAGRAM/panels3/r1_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r1_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r1_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r2_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1080" height="1350" src="INSTAGRAM/panels3/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
-            <img src="INSTAGRAM/panels4/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r1_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r1_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r1_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r2_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
-            <img src="INSTAGRAM/panels4/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r1_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1080" height="1350" src="INSTAGRAM/panels4/r1_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r1_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r2_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
           </div>
           <div class="media-caption">Instagram Layout Skizzen<br>in Figma gestaltet</div>
@@ -1009,19 +1018,19 @@
         </div>
         <div class="media-content">
           <div class="media-group" style="width: 75%;">
-            <img src="INSTAGRAM/1.png" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="2000" height="808" src="INSTAGRAM/1.png" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <div class="media-caption">Finales Layout für Instagram</div>
           </div>
           <div class="media-group" style="width: 75%;">
-            <img src="INSTAGRAM/5.jpg" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="2559" src="INSTAGRAM/5.jpg" alt="" style="width: 100%;">
             <div class="media-caption">Instagram Layout</div>
           </div>
           <div class="media-group" style="width: 75%;">
-            <img src="INSTAGRAM/6.jpg" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="2559" src="INSTAGRAM/6.jpg" alt="" style="width: 100%;">
             <div class="media-caption">Instagram Beitrag</div>
           </div>
           <div class="media-group portrait" style="width: 37.5%;">
-            <img src="WERBUNG/story_grauer_block.png" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1040" height="1848" src="WERBUNG/story_grauer_block.png" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <div class="media-caption">Repost Grauer Block</div>
           </div>
         </div>
@@ -1031,11 +1040,11 @@
         </div>
         <div class="media-content">
           <div class="media-group portrait" style="width: 37.5%;">
-            <img src="WERBUNG/story_klueck.png" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1042" height="1851" src="WERBUNG/story_klueck.png" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <div class="media-caption">Repost Klyck-Quartierarbeit</div>
           </div>
           <div class="media-group portrait" style="width: 37.5%;">
-            <img src="INSTAGRAM/holzpark.PNG" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+            <img loading="lazy" width="1179" height="2091" src="INSTAGRAM/holzpark.PNG" alt="" style="width: 100%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
         </div>
       </div>
@@ -1047,9 +1056,9 @@
       <div id="sec-ortssuche-2" class="category-section">
         <div class="category-header">ORTSSUCHE 2</div>
         <div class="media-content">
-          <div style="width: 37.5%; align-self: center;"><img src="ORTSSUCHE 2/5.JPG" alt="" style="width: 100%;"></div>
+          <div style="width: 37.5%; align-self: center;"><img loading="lazy" width="2560" height="1920" src="ORTSSUCHE 2/5.JPG" alt="" style="width: 100%;"></div>
           <div style="width: 56.25%; align-self: center;">
-            <img src="ORTSSUCHE 2/6.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE 2/6.JPG" alt="" style="width: 100%;">
             <div class="media-caption">Fläche auf dem Zack-Areal</div>
           </div>
         </div>
@@ -1058,11 +1067,11 @@
           <div style="text-indent: 20px;">Dafür schlenderte ich mit dem Fahrrad durch die Strassen des Klybecks. Dabei fielen mir die alten Fabrikgebäude entlang der Mauerstrasse in der Nähe des Horburgparks auf. Das Klybeck Plus sieht auf diesem Areal neue Bebauungen vor, gleichzeitig stehen die Backsteingebäude symbolisch für die Geschichte und Identität des Klybecks sowie seine Industrievergangenheit, weshalb ich mir vorstellen konnte, die Installation dort auszutragen. Anfangs fand ich jedoch keinen passenden Ort: Die Flächen, die ich entlang der Gebäude fand, waren entweder zu klein oder hätten den Verkehr gestört. Später fand ich weiter vorne den Eingang zum Areal und gleich rechts daneben eine Backsteinfläche, die bei einer Projektion den Verkehr nicht stören würde.</div>
         </div>
         <div class="media-content">
-          <div style="width: 37.5%; align-self: center;"><img src="ORTSSUCHE 2/2.JPG" alt="" style="width: 100%;"></div>
-          <div style="width: 56.25%; align-self: center;"><img src="ORTSSUCHE 2/3.JPG" alt="" style="width: 100%;"></div>
-          <div style="width: 37.5%; align-self: center;"><img src="ORTSSUCHE 2/1.JPG" alt="" style="width: 100%;"></div>
+          <div style="width: 37.5%; align-self: center;"><img loading="lazy" width="2560" height="1920" src="ORTSSUCHE 2/2.JPG" alt="" style="width: 100%;"></div>
+          <div style="width: 56.25%; align-self: center;"><img loading="lazy" width="2560" height="1920" src="ORTSSUCHE 2/3.JPG" alt="" style="width: 100%;"></div>
+          <div style="width: 37.5%; align-self: center;"><img loading="lazy" width="2560" height="1920" src="ORTSSUCHE 2/1.JPG" alt="" style="width: 100%;"></div>
           <div style="width: 75%; align-self: center;">
-            <img src="ORTSSUCHE 2/7.JPG" alt="" style="width: 100%;">
+            <img loading="lazy" width="2560" height="1920" src="ORTSSUCHE 2/7.JPG" alt="" style="width: 100%;">
             <div class="media-caption">Finaler Ort bei der Mauerstrasse</div>
           </div>
         </div>
@@ -1073,7 +1082,7 @@
           <div style="text-indent: 20px;">Das Live-Visual habe ich nach der Realisierung der Website zu gestalten begonnen. Wie schon bei der Website hat mich dabei Claude Code unterstützt. Relativ schnell hatte ich erste Meinungen vorliegen, mit denen ich erste Visualisierungsversuche starten konnte. In einem ersten Visual habe ich alle Meinungen in einer durchlaufenden Anzeige dargestellt. Ich wollte vor allem testen, ob ich die Meinungen über eine API aus der Supabase-Datenbank zurück in eine neue HTML-Datei einspeisen kann. Ausserdem wollte ich prüfen, ob eine neue Antwort sich ohne Verzögerung im Visual einblenden lässt, also ob sie sofort an die erste Stelle der durchlaufenden Warteschlange gesetzt wird.</div>
         </div>
         <div class="media-content">
-          <video autoplay muted loop playsinline style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+          <video class="lv-first" autoplay muted loop playsinline style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <source src="LIVE-VISUAL/anzeige_direkt_hevc.mov" type="video/mp4; codecs=&quot;hvc1&quot;">
             <source src="LIVE-VISUAL/anzeige_direkt.webm" type="video/webm">
           </video>
@@ -1092,12 +1101,12 @@
         </div>
         <div class="media-content">
           <div style="display: flex; flex-direction: column; gap: 0; width: 75%;">
-            <img src="LIVE-VISUAL/scan1.jpg" alt="" style="width: 75%; margin: 0 auto; display: block;">
-            <img src="LIVE-VISUAL/scan2.jpg" alt="" style="width: 100%; display: block;">
+            <img loading="lazy" width="1550" height="1337" src="LIVE-VISUAL/scan1.jpg" alt="" style="width: 75%; margin: 0 auto; display: block;">
+            <img loading="lazy" width="2496" height="1405" src="LIVE-VISUAL/scan2.jpg" alt="" style="width: 100%; display: block;">
           </div>
         </div>
         <div class="media-content">
-          <img src="LIVE-VISUAL/alle_meinungen.png" alt="" style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+          <img loading="lazy" width="2794" height="2143" src="LIVE-VISUAL/alle_meinungen.png" alt="" style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
           <div style="text-indent: 20px;">Ich habe zuerst alle Meinungen zusammen mit den Fragen als grosses Grid visualisiert. Das hat mir ein Gefühl für die Menge aller Statements gegeben. Anschliessend habe ich das Live-Visual im Code an die Befragungswebsite gebunden, ohne es bereits online zu stellen. In der Befragungswebsite habe ich ein Fenster eingebaut, in dem durchlaufend eine Meinung erscheint und man zum Beispiel ein Wort antippen kann. In einem ersten Experiment wurde dieses angetippte Wort doppelt so gross und auf dem Live-Visual ebenfalls hervorgehoben. Das funktioniert über WebSockets, wodurch die Latenz zwischen Live-Visual und Input der Befragungswebsite auf ein Minimum reduziert wird.</div>
@@ -1130,12 +1139,12 @@
           </video>
           <div class="media-group" style="width: 18.75%;">
             <div style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));"><div style="overflow: hidden; border-radius: 12px; line-height: 0;">
-              <img src="LIVE-VISUAL/Mobile.PNG" alt="">
+              <img loading="lazy" width="922" height="2000" src="LIVE-VISUAL/Mobile.PNG" alt="">
             </div></div>
           </div>
           <div class="media-group" style="width: 56.25%;">
             <div style="filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));"><div style="overflow: hidden; border-radius: 12px; line-height: 0;">
-              <img src="LIVE-VISUAL/Desktop.png" alt="">
+              <img loading="lazy" width="2000" height="1255" src="LIVE-VISUAL/Desktop.png" alt="">
             </div></div>
           </div>
         </div>
@@ -1155,7 +1164,7 @@
           <div style="text-indent: 20px;">Dieses Konzept habe ich erweitert und mir überlegt, jedem User, der ein Wort antippt, eine eigene Farbe zuzuweisen. So entsteht eine Visualisierung davon, wie viele verschiedene Menschen etwas Geschriebenes wichtig finden und dem Gesagten zustimmen. Ausserdem habe ich die Frage ausgebaut und oben links in das Layout des Live-Visuals integriert. Die Befragungswebsite wurde um einen „Reagieren"-Button ergänzt, über welchen man live mit der Projektion interagieren kann. Im „Reagieren"-Modus lassen sich die drei Meinungen oder die einzelne Meinung, die gerade live projiziert wird, über Links- und Rechtswischen in drei Sparten durchstöbern und einzelne Wörter oder ganze Sätze antippen. Jederzeit kann man zurück zur Landingpage wischen und dort im Eingabefeld etwas Weiteres schreiben.</div>
         </div>
         <div class="media-content">
-          <img src="LIVE-VISUAL/versuch.jpeg" alt="" style="width: 37.5%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+          <img loading="lazy" width="2560" height="1920" src="LIVE-VISUAL/versuch.jpeg" alt="" style="width: 37.5%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           <video autoplay muted loop playsinline style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <source src="LIVE-VISUAL/final_visual_hevc.mov" type="video/mp4; codecs=&quot;hvc1&quot;">
             <source src="LIVE-VISUAL/final_visual.webm" type="video/webm">
