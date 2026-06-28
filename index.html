@@ -437,8 +437,13 @@
         display: flex !important;
         flex-direction: column;
       }
-      /* LIVE-VISUAL erstes Video: eine Stufe schmaler auf Mobil (75% statt voll) */
-      .lv-first {
+      /* Abstand zwischen den gestapelten Skizzen etwas verkleinern */
+      .insta-sketches .dot-wrap {
+        margin-top: 16px !important;
+        margin-bottom: 2px !important;
+      }
+      /* LIVE-VISUAL erstes BILD (scan1) eine Stufe schmaler auf Mobil */
+      .lv-scan1 {
         width: 75% !important;
       }
     }
@@ -1096,7 +1101,7 @@
           <div style="text-indent: 20px;">Das Live-Visual habe ich nach der Realisierung der Website zu gestalten begonnen. Wie schon bei der Website hat mich dabei Claude Code unterstützt. Relativ schnell hatte ich erste Meinungen vorliegen, mit denen ich erste Visualisierungsversuche starten konnte. In einem ersten Visual habe ich alle Meinungen in einer durchlaufenden Anzeige dargestellt. Ich wollte vor allem testen, ob ich die Meinungen über eine API aus der Supabase-Datenbank zurück in eine neue HTML-Datei einspeisen kann. Ausserdem wollte ich prüfen, ob eine neue Antwort sich ohne Verzögerung im Visual einblenden lässt, also ob sie sofort an die erste Stelle der durchlaufenden Warteschlange gesetzt wird.</div>
         </div>
         <div class="media-content">
-          <video class="lv-first" autoplay muted loop playsinline style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
+          <video autoplay muted loop playsinline style="width: 75%; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <source src="LIVE-VISUAL/anzeige_direkt_hevc.mov" type="video/mp4; codecs=&quot;hvc1&quot;">
             <source src="LIVE-VISUAL/anzeige_direkt.webm" type="video/webm">
           </video>
@@ -1115,7 +1120,7 @@
         </div>
         <div class="media-content">
           <div style="display: flex; flex-direction: column; gap: 0; width: 75%;">
-            <img loading="lazy" width="1550" height="1337" src="LIVE-VISUAL/scan1.jpg" alt="" style="width: 75%; margin: 0 auto; display: block;">
+            <img loading="lazy" width="1550" height="1337" class="lv-scan1" src="LIVE-VISUAL/scan1.jpg" alt="" style="width: 75%; margin: 0 auto; display: block;">
             <img loading="lazy" width="2496" height="1405" src="LIVE-VISUAL/scan2.jpg" alt="" style="width: 100%; display: block;">
           </div>
         </div>
