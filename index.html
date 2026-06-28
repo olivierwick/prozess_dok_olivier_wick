@@ -194,6 +194,10 @@
     [data-media-container]:hover .full-btn {
       opacity: 1;
     }
+    /* Medium + Pfeil in dieselbe Compositing-Ebene -> mix-blend-mode:difference blendet auch ueber Video (auch iOS) */
+    [data-media-container] {
+      transform: translateZ(0);
+    }
 
     .media-group {
       width: 100%;
@@ -1383,10 +1387,7 @@
       container.parentNode.insertBefore(dotWrap, container);
       var btn = document.createElement('button');
       btn.className = 'full-btn';
-      var isVideo = mediaEl && mediaEl.tagName === 'VIDEO';
-      // iOS kann mix-blend-mode nicht ueber <video> blenden -> dort weisser Pfeil mit Schatten (ueberall sichtbar)
-      var arrowStyle = isVideo ? 'filter:drop-shadow(0 0 3px rgba(0,0,0,0.6));' : 'mix-blend-mode:difference;';
-      btn.innerHTML = '<img src="pfeil.png" alt="fullscreen" style="width:50px;height:50px;transform:rotate(90deg);' + arrowStyle + '">';
+      btn.innerHTML = '<img src="pfeil.png" alt="fullscreen" style="width:50px;height:50px;transform:rotate(90deg);mix-blend-mode:difference;filter:brightness(0) invert(1);">';
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
         if (mediaEl.tagName === 'VIDEO') {
