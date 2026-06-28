@@ -137,14 +137,6 @@
     }
     /* width/height-Attribute reservieren Platz; height:auto verhindert vertikales Strecken */
     img[width] { height: auto; }
-    /* Instagram Layout-Skizzen: 3 eigenständige media-groups, Desktop nebeneinander */
-    .insta-sketches {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      align-items: start;
-    }
-    .insta-sketches .media-group { width: 100%; }
 
 
     .rounded {
@@ -431,16 +423,6 @@
       .full-btn img {
         width: 38px !important;
         height: 38px !important;
-      }
-      /* Instagram Layout-Skizzen: auf Mobil untereinander (Standard-Abstände via media-group) */
-      .insta-sketches {
-        display: flex !important;
-        flex-direction: column;
-      }
-      /* Abstand zwischen den gestapelten Skizzen etwas verkleinern */
-      .insta-sketches .dot-wrap {
-        margin-top: 16px !important;
-        margin-bottom: 2px !important;
       }
       /* LIVE-VISUAL erstes BILD (scan1) eine Stufe schmaler auf Mobil */
       .lv-scan1 {
@@ -988,8 +970,8 @@
             <div class="media-caption">Fotos im Klybeck Quartier</div>
           </div>
         </div>
-        <div class="media-content insta-sketches">
-          <div class="media-group insta-sketch">
+        <div class="media-content">
+          <div class="media-group" style="width: 75%;">
           <div data-fullscreen-src="INSTAGRAM/2.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -1003,7 +985,9 @@
           </div>
           <div class="media-caption">Instagram Layout Skizzen<br>in Figma gestaltet</div>
           </div>
-          <div class="media-group insta-sketch">
+        </div>
+        <div class="media-content">
+          <div class="media-group" style="width: 75%;">
           <div data-fullscreen-src="INSTAGRAM/3.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="1049" height="1350" src="INSTAGRAM/panels3/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -1017,7 +1001,9 @@
           </div>
           <div class="media-caption">Instagram Layout Skizzen<br>in Figma gestaltet</div>
           </div>
-          <div class="media-group insta-sketch">
+        </div>
+        <div class="media-content">
+          <div class="media-group" style="width: 75%;">
           <div data-fullscreen-src="INSTAGRAM/4.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
