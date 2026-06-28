@@ -135,6 +135,8 @@
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
+    /* width/height-Attribute reservieren Platz; height:auto verhindert vertikales Strecken */
+    img[width] { height: auto; }
 
 
     .rounded {
@@ -235,7 +237,7 @@
       gap: 0;
       font-family: 'RonzinoRegular', sans-serif;
       font-size: 20px;
-      line-height: 22px;
+      line-height: 26px;
       text-align: left;
       width: 100%;
       max-width: 800px;
@@ -440,7 +442,7 @@
       }
       .doku-text {
         font-size: 17px;
-        line-height: 17px;
+        line-height: 22px;
       }
       .anhang-two-col,
       .anhang-imprint {
