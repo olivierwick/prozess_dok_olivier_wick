@@ -1383,7 +1383,10 @@
       container.parentNode.insertBefore(dotWrap, container);
       var btn = document.createElement('button');
       btn.className = 'full-btn';
-      btn.innerHTML = '<img src="pfeil.png" alt="fullscreen" style="width:50px;height:50px;transform:rotate(90deg);mix-blend-mode:difference;">';
+      var isVideo = mediaEl && mediaEl.tagName === 'VIDEO';
+      // iOS kann mix-blend-mode nicht ueber <video> blenden -> dort weisser Pfeil mit Schatten (ueberall sichtbar)
+      var arrowStyle = isVideo ? 'filter:drop-shadow(0 0 3px rgba(0,0,0,0.6));' : 'mix-blend-mode:difference;';
+      btn.innerHTML = '<img src="pfeil.png" alt="fullscreen" style="width:50px;height:50px;transform:rotate(90deg);' + arrowStyle + '">';
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
         if (mediaEl.tagName === 'VIDEO') {
