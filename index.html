@@ -187,7 +187,6 @@
       font-size: 20px;
       line-height: 20px;
       color: white;
-      mix-blend-mode: difference;
       text-align: left;
       opacity: 0;
       transition: opacity 0.2s;
@@ -197,7 +196,7 @@
     .media-group:hover .full-btn,
     .img-rotate-wrapper:hover .full-btn,
     [data-media-container]:hover .full-btn {
-      opacity: 0.3;
+      opacity: 1;
     }
 
     .media-group {
@@ -327,7 +326,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 30px calc(20px + 2vw) 0;
+      padding: 0 calc(20px + 2vw) 0;
       font-family: 'RonzinoRegular', sans-serif;
       font-size: 20px;
       line-height: 22px;
@@ -344,7 +343,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 30px calc(20px + 2vw) 0;
+      padding: 0 calc(20px + 2vw) 0;
       font-family: 'RonzinoRegular', sans-serif;
       font-size: 20px;
       line-height: 22px;
@@ -364,7 +363,7 @@
 
     .anhang-section > .dot-wrap {
       margin-top: 4px;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .anhang-section > .dot-wrap > .doku-text-dot {
@@ -374,6 +373,11 @@
 
     .anhang-section:first-child {
       margin-top: 0;
+    }
+
+    /* Instagram 9er-Grids: nur auf Desktop eine Stufe schmaler (Mobil bleibt voll) */
+    @media (min-width: 601px) {
+      .insta-grid { width: 56.25% !important; }
     }
 
     @media (max-width: 600px) {
@@ -971,7 +975,7 @@
           </div>
         </div>
         <div class="media-content">
-          <div class="media-group" style="width: 75%;">
+          <div class="media-group insta-grid" style="width: 75%;">
           <div data-fullscreen-src="INSTAGRAM/2.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -987,7 +991,7 @@
           </div>
         </div>
         <div class="media-content">
-          <div class="media-group" style="width: 75%;">
+          <div class="media-group insta-grid" style="width: 75%;">
           <div data-fullscreen-src="INSTAGRAM/3.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="1049" height="1350" src="INSTAGRAM/panels3/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -1003,7 +1007,7 @@
           </div>
         </div>
         <div class="media-content">
-          <div class="media-group" style="width: 75%;">
+          <div class="media-group insta-grid" style="width: 75%;">
           <div data-fullscreen-src="INSTAGRAM/4.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -1226,6 +1230,14 @@
       ready.then(function () {
         var el = document.getElementById(id);
         if (!el) return;
+        function targetTop() {
+          var head = el.querySelector('.anhang-head');
+          if (head) {
+            var stickyTop = parseFloat(getComputedStyle(head).top) || 0;
+            return window.pageYOffset + head.getBoundingClientRect().top - stickyTop;
+          }
+          return el.offsetTop;
+        }
         var userScrolled = false;
         function onUser() { userScrolled = true; cleanup(); }
         function cleanup() {
@@ -1236,9 +1248,9 @@
         window.addEventListener('wheel', onUser, { passive: true });
         window.addEventListener('touchmove', onUser, { passive: true });
         window.addEventListener('keydown', onUser);
-        window.scrollTo({ top: el.offsetTop });
+        window.scrollTo({ top: targetTop() });
         [60, 160, 320, 550, 850, 1300].forEach(function (t) {
-          setTimeout(function () { if (!userScrolled) window.scrollTo({ top: el.offsetTop }); }, t);
+          setTimeout(function () { if (!userScrolled) window.scrollTo({ top: targetTop() }); }, t);
         });
         setTimeout(cleanup, 1500);
       });
@@ -1285,7 +1297,7 @@
       clearTimeout(hideTimer);
       document.querySelectorAll('[data-media-container]').forEach(function(c) {
         var b = c.querySelector('.full-btn');
-        if (b) b.style.opacity = (c === container) ? '0.3' : '0';
+        if (b) b.style.opacity = (c === container) ? '1' : '0';
       });
       hideTimer = setTimeout(function() {
         document.querySelectorAll('[data-media-container] .full-btn').forEach(function(b) { b.style.opacity = '0'; });
@@ -1376,7 +1388,7 @@
       container.parentNode.insertBefore(dotWrap, container);
       var btn = document.createElement('button');
       btn.className = 'full-btn';
-      btn.innerHTML = '<img src="pfeil.png" alt="fullscreen" style="width:50px;height:50px;transform:rotate(90deg);">';
+      btn.innerHTML = '<img src="pfeil.png" alt="fullscreen" style="width:50px;height:50px;transform:rotate(90deg);mix-blend-mode:difference;opacity:0.3;">';
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
         if (mediaEl.tagName === 'VIDEO') {
@@ -1560,13 +1572,8 @@
           e.stopPropagation();
           scrollFlush(dot);
         });
-        // Punkt UNTER den ersten Titel (wie doku: Titel -> Punkt -> Inhalt)
-        var firstEl = section.firstElementChild;
-        if (firstEl) {
-          firstEl.insertAdjacentElement('afterend', dotWrap);
-        } else {
-          section.appendChild(dotWrap);
-        }
+        // Punkt ÜBER die Sektion (wie doku: Punkt -> Text), nicht unter die erste Zeile
+        section.insertBefore(dotWrap, section.firstElementChild);
       });
     }
 
