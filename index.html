@@ -137,15 +137,14 @@
     }
     /* width/height-Attribute reservieren Platz; height:auto verhindert vertikales Strecken */
     img[width] { height: auto; }
-    /* Instagram Layout-Skizzen: 3 eigenständige Einheiten, Desktop nebeneinander */
+    /* Instagram Layout-Skizzen: 3 eigenständige media-groups, Desktop nebeneinander */
     .insta-sketches {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
       align-items: start;
     }
-    .insta-sketches > .media-caption { grid-column: 1 / -1; }
-    .insta-sketches .dot-wrap { display: none; }
+    .insta-sketches .media-group { width: 100%; }
 
 
     .rounded {
@@ -433,13 +432,11 @@
         width: 38px !important;
         height: 38px !important;
       }
-      /* Instagram Layout-Skizzen: auf Mobil untereinander, mit eigenen Punkten + Abstand */
+      /* Instagram Layout-Skizzen: auf Mobil untereinander (Standard-Abstände via media-group) */
       .insta-sketches {
         display: flex !important;
         flex-direction: column;
-        gap: 24px;
       }
-      .insta-sketches .dot-wrap { display: flex; }
       /* LIVE-VISUAL erstes Video: eine Stufe schmaler auf Mobil (75% statt voll) */
       .lv-first {
         width: 75% !important;
@@ -987,7 +984,8 @@
           </div>
         </div>
         <div class="media-content insta-sketches">
-          <div class="insta-sketch" data-fullscreen-src="INSTAGRAM/2.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+          <div class="media-group insta-sketch">
+          <div data-fullscreen-src="INSTAGRAM/2.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -998,7 +996,10 @@
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels2/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
-          <div class="insta-sketch" data-fullscreen-src="INSTAGRAM/3.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+          <div class="media-caption">Instagram Layout Skizzen<br>in Figma gestaltet</div>
+          </div>
+          <div class="media-group insta-sketch">
+          <div data-fullscreen-src="INSTAGRAM/3.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="1049" height="1350" src="INSTAGRAM/panels3/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -1009,7 +1010,10 @@
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels3/r2_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="1080" height="1350" src="INSTAGRAM/panels3/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
-          <div class="insta-sketch" data-fullscreen-src="INSTAGRAM/4.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+          <div class="media-caption">Instagram Layout Skizzen<br>in Figma gestaltet</div>
+          </div>
+          <div class="media-group insta-sketch">
+          <div data-fullscreen-src="INSTAGRAM/4.png" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c0.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c1.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r0_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
@@ -1021,6 +1025,7 @@
             <img loading="lazy" width="864" height="1080" src="INSTAGRAM/panels4/r2_c2.png" alt="" style="width:100%;display:block;border-radius:3px;filter:drop-shadow(0 2px 10px rgba(0,0,0,0.2));">
           </div>
           <div class="media-caption">Instagram Layout Skizzen<br>in Figma gestaltet</div>
+          </div>
         </div>
         <div class="doku-text" style="padding: 0 calc(20px + 2vw); max-width: 800px; margin-left: auto; margin-right: auto;">
           <div style="text-indent: 20px;">Schlussendlich habe ich mich für ein einfaches Layout mit einem 3er-Grid entschieden. Die vorangegangenen Versuche mit dem 9er-Grid wirkten zu unruhig, und ich empfand die Anzahl der Bilder als zu hoch. Im 3er-Grid zeige ich zwei weisse Info-Beiträge sowie einen Slider mit zuvor aufgenommenen Bildern des Klybecks. Auf den weissen Beiträgen zeige ich bereits die Fragen, die auch auf der Website stehen, sowie mein Vorhaben, inwiefern ich die Statements für mein Abschlussprojekt brauche. Farblich arbeitete ich weiterhin im Pink-Weiss-Schema, um an das Erscheinungsbild der Website anzuknüpfen. Zudem habe ich versucht, die Linie sowie die Pfeile der Website auf der Instagram-Seite wiederaufzugreifen.</div>
@@ -1562,6 +1567,10 @@
         var multiEl = container.hasAttribute('data-fullscreen-srcs') ? container : container.querySelector('[data-fullscreen-srcs]');
         if (multiEl) {
           addFullBtn(container, { multiSrcs: multiEl.getAttribute('data-fullscreen-srcs').split(',') });
+        } else if (container.hasAttribute('data-fullscreen-src')) {
+          var fsImg = document.createElement('img');
+          fsImg.src = container.getAttribute('data-fullscreen-src');
+          addFullBtn(container, fsImg);
         } else {
           addFullBtn(container, media);
         }
