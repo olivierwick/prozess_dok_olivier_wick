@@ -1375,7 +1375,19 @@
       container.style.position = 'relative';
       container.setAttribute('data-media-container', '1');
       // Video-Container flach rendern (wie oli_portfolio), damit difference-Pfeil ueber Video blendet (auch iOS)
-      if (mediaEl && mediaEl.tagName === 'VIDEO') container.style.overflow = 'hidden';
+      if (mediaEl && mediaEl.tagName === 'VIDEO') {
+        container.style.overflow = 'hidden';
+        // overflow:hidden wuerde den drop-shadow des Videos abschneiden ->
+        // Schatten auf einen aeusseren, NICHT geclippten Wrapper auslagern (gleiches Pattern wie bei den Bildern).
+        if (mediaEl.style.filter && mediaEl.style.filter.indexOf('drop-shadow') !== -1) {
+          var shadowWrap = document.createElement('div');
+          shadowWrap.style.filter = mediaEl.style.filter;
+          mediaEl.style.filter = '';
+          if (container.style.width) { shadowWrap.style.width = container.style.width; container.style.width = '100%'; }
+          container.parentNode.insertBefore(shadowWrap, container);
+          shadowWrap.appendChild(container);
+        }
+      }
 
       var dotWrap = document.createElement('div');
       dotWrap.className = 'dot-wrap';
