@@ -40,6 +40,29 @@
       color: color(display-p3 0 0 0);
     }
 
+    /* ── LADESCREEN ── */
+    #loading-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      background: color(display-p3 1 1 1);
+      font-family: 'Ronzino', sans-serif;
+      font-size: 30px;
+      line-height: 30px;
+      color: black;
+      color: color(display-p3 0 0 0);
+      transition: opacity 0.4s ease;
+    }
+    #loading-screen.is-hidden { opacity: 0; }
+    #load-dots { display: inline-block; width: 1.5em; text-align: left; }
+    @media (max-width: 600px) {
+      #loading-screen { font-size: 24px; line-height: 24px; }
+    }
+
     /* ── VIEWS ── */
     .view {
       display: none;
@@ -493,6 +516,19 @@
   </style>
 </head>
 <body>
+
+  <!-- LADESCREEN -->
+  <div id="loading-screen">LÄDT<span id="load-dots">.</span></div>
+  <script>
+    (function() {
+      var d = document.getElementById('load-dots');
+      var n = 1;
+      setInterval(function() {
+        n = n % 3 + 1;            // 1 -> 2 -> 3 -> 1 ...
+        d.textContent = new Array(n + 1).join('.');
+      }, 1000);
+    })();
+  </script>
 
   <!-- INDEX VIEW -->
   <div id="view-index" class="view active">
@@ -1834,6 +1870,14 @@
         var el = document.getElementById(this.getAttribute('href').slice(1));
         if (el) window.scrollTo({ top: el.offsetTop - 60 });
       });
+    });
+
+    // Ladescreen ausblenden, sobald die Seite geladen ist (nach dem Layout-Init oben)
+    window.addEventListener('load', function() {
+      var screen = document.getElementById('loading-screen');
+      if (!screen) return;
+      screen.classList.add('is-hidden');
+      setTimeout(function() { screen.style.display = 'none'; }, 400);
     });
   </script>
 </body>
