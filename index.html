@@ -194,7 +194,9 @@
     [data-media-container]:hover .full-btn {
       opacity: 1;
     }
-    /* Medium + Pfeil in dieselbe Compositing-Ebene -> mix-blend-mode:difference blendet auch ueber Video (auch iOS) */
+    /* Bild-Container: GPU-Ebene ok. Video-Container heben das per inline transform:none auf,
+       weil eine eigene Compositing-Ebene den difference-Pfeil ueber <video> auf iOS kaputtmacht
+       (siehe addFullBtn / https://jen.dev/blog/video-blend-mode). */
     [data-media-container] {
       transform: translateZ(0);
     }
@@ -1374,19 +1376,14 @@
     function addFullBtn(container, mediaEl) {
       container.style.position = 'relative';
       container.setAttribute('data-media-container', '1');
-      // Video-Container flach rendern (wie oli_portfolio), damit difference-Pfeil ueber Video blendet (auch iOS)
+      // iOS: mix-blend-mode:difference blendet ueber <video> NUR, wenn der Pfeil ein absolut
+      // positioniertes Geschwister ueber dem Video ist (ist .full-btn) UND der Container KEINE
+      // eigene Compositing-/Isolations-Ebene aufmacht -> also KEIN translateZ, KEIN filter,
+      // KEIN overflow:hidden auf dem Container. (Quelle: https://jen.dev/blog/video-blend-mode)
+      // Der drop-shadow bleibt deshalb auf dem <video> selbst; ohne overflow:hidden wird er
+      // auch nicht abgeschnitten. Die globale translateZ-Regel hier per inline-Style aufheben:
       if (mediaEl && mediaEl.tagName === 'VIDEO') {
-        container.style.overflow = 'hidden';
-        // overflow:hidden wuerde den drop-shadow des Videos abschneiden ->
-        // Schatten auf einen aeusseren, NICHT geclippten Wrapper auslagern (gleiches Pattern wie bei den Bildern).
-        if (mediaEl.style.filter && mediaEl.style.filter.indexOf('drop-shadow') !== -1) {
-          var shadowWrap = document.createElement('div');
-          shadowWrap.style.filter = mediaEl.style.filter;
-          mediaEl.style.filter = '';
-          if (container.style.width) { shadowWrap.style.width = container.style.width; container.style.width = '100%'; }
-          container.parentNode.insertBefore(shadowWrap, container);
-          shadowWrap.appendChild(container);
-        }
+        container.style.transform = 'none';
       }
 
       var dotWrap = document.createElement('div');
