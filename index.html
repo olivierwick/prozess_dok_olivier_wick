@@ -58,7 +58,8 @@
       transition: opacity 0.4s ease;
     }
     #loading-screen.is-hidden { opacity: 0; }
-    #load-dots { display: inline-block; width: 1.5em; text-align: left; }
+    #laedt-word { position: relative; }
+    #load-dots { position: absolute; left: 100%; top: 0; }
     @media (max-width: 600px) {
       #loading-screen { font-size: 24px; line-height: 24px; }
     }
@@ -518,7 +519,7 @@
 <body>
 
   <!-- LADESCREEN -->
-  <div id="loading-screen">LÄDT<span id="load-dots">.</span></div>
+  <div id="loading-screen"><span id="laedt-word">LÄDT<span id="load-dots">.</span></span></div>
   <script>
     (function() {
       var d = document.getElementById('load-dots');
