@@ -1398,7 +1398,11 @@
       container.parentNode.insertBefore(dotWrap, container);
       var btn = document.createElement('button');
       btn.className = 'full-btn';
-      btn.innerHTML = '<img src="pfeil90.png" alt="fullscreen" style="width:50px;height:50px;mix-blend-mode:difference;filter:brightness(0) invert(1);">';
+      // mix-blend-mode + filter am SELBEN Element ist auf iOS-WebKit kaputt (Regression).
+      // -> Blend auf den Button (das absolut positionierte Geschwister = jen.dev-Rezept),
+      //    Weissfaerben-filter aufs <img>-Kind (Filter auf Nachfahre isoliert den Blend nicht).
+      btn.style.mixBlendMode = 'difference';
+      btn.innerHTML = '<img src="pfeil90.png" alt="fullscreen" style="width:50px;height:50px;filter:brightness(0) invert(1);">';
       btn.addEventListener('click', function(e) {
         e.stopPropagation();
         if (mediaEl.tagName === 'VIDEO') {
